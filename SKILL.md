@@ -1,9 +1,10 @@
 ---
 name: humanizer-zh
-description: 保真去除中文文本中的 AI 写作痕迹，或做不改事实的润色；用户明确指定创作模式时做更有力度的去 AI 味改写。用户说“去 AI 味”“检查 AI 腔”“消除 AI 写作痕迹”“humanizer”“润色”“改自然点”“说人话”时使用。不用于从零写文章、写爆文、起标题、做大纲，也不用于改代码、配置、YAML 或翻译。
+description: 拟人写作 / 保真去 AI 味。去除中文文本中的 AI 写作痕迹，或做不改事实的润色。Triggers: 去 AI 味、检查 AI 腔、消除 AI 写作痕迹、humanizer、humanize、润色、改自然点、说人话、make this sound human。用户明确说「启用创作模式」时才做更大幅度改写。不用于从零写文章、写爆文、起标题、做大纲，也不用于改代码、配置、YAML 或翻译。Do not invent facts to sound more human.
 version: "1.1.0"
 license: MIT
-compatibility: "Agent Skills compatible; no scripts, network access, API keys, or special tools required."
+compatibility: "Agent Skills compatible (Work Buddy / Claude Code / Codex / Cursor / any SKILL.md host). No scripts, network, or API keys required."
+allowed-tools: []
 ---
 
 # Humanizer-zh
