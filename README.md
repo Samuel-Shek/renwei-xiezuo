@@ -1,8 +1,8 @@
-# humanizer-zh
+# 人味写作
 
-**拟人写作：把 AI 腔去掉，把人味留下。不改事实，不编故事。**
+**把 AI 腔去掉，把人味留下。不改事实，不编故事。**
 
-市面上「去 AI 味」工具很多，但不少会为了显得自然，把模糊信息改具体、把平淡经历加戏、把作者没说过的话写进去。humanizer-zh 的原则反过来：**先保真，再像人。**
+市面上同类工具很多，但不少会为了显得自然，把模糊信息改具体、把平淡经历加戏、把作者没说过的话写进去。人味写作的原则反过来：**先保真，再像人。**
 
 ---
 
@@ -16,7 +16,7 @@ AI 写出来的东西常有这些毛病：
 - 「值得注意的是」「综上所述」的机械衔接
 - 结尾硬凹升华，正文其实没信息量
 
-但去 AI 味时更大的坑是**过度修改**：
+但改写时更大的坑是**过度修改**：
 
 - 为了「真实感」补出原文没有的数据、案例、对话
 - 把简历上的「参与」改成「主导」
@@ -24,7 +24,7 @@ AI 写出来的东西常有这些毛病：
 - 把本来就自然的口语改得更「文」
 - 换掉术语、动了代码、改了标点体系
 
-humanizer-zh 专门对付这两头：**该删的套话删干净，不该动的一个字不碰。**
+人味写作专门对付这两头：**该删的套话删干净，不该动的一个字不碰。**
 
 ---
 
@@ -80,7 +80,7 @@ humanizer-zh 专门对付这两头：**该删的套话删干净，不该动的�
 - Markdown 链接、表格、标题层级、HTML、YAML、JSON
 - 模板占位符、品牌术语、简历指标、合同条款、技术参数
 
-不改你的标点体系（全角引号、「」、破折号都不是 AI 痕迹），不在中英之间补空格。
+不改你的标点体系（全角引号、「」、破折号都不是 AI 腔），不在中英之间补空格。
 
 ### 5. 说话人不能换
 
@@ -98,9 +98,9 @@ humanizer-zh 专门对付这两头：**该删的套话删干净，不该动的�
 
 ---
 
-## 和常见去 AI 味 / 润色工具的差别
+## 和常见润色 / 改写工具的差别
 
-| 维度 | 常见做法 | humanizer-zh |
+| 维度 | 常见做法 | 人味写作 |
 |---|---|---|
 | 首要目标 | 读起来更像人 | **先保真，再像人** |
 | 事实处理 | 易补细节、加戏、改强度 | **事实锁**，缺素材就 no-op |
@@ -133,10 +133,10 @@ humanizer-zh 专门对付这两头：**该删的套话删干净，不该动的�
 Agent Skills 标准结构，**任何支持 `SKILL.md` 的 AI 工具都能装**。
 
 ```bash
-git clone https://github.com/Samuel-Shek/humanizer-zh.git
+git clone https://github.com/Samuel-Shek/renwei-xiezuo.git
 ```
 
-把 `humanizer-zh/` 文件夹放进对应工具的技能目录：
+把 `renwei-xiezuo/` 文件夹放进对应工具的技能目录：
 
 | 工具 | 安装位置 |
 |---|---|
@@ -148,17 +148,17 @@ git clone https://github.com/Samuel-Shek/humanizer-zh.git
 
 ```bash
 # 示例：装进 Work Buddy
-cp -r humanizer-zh ~/.workbuddy/skills/
+cp -r renwei-xiezuo ~/.workbuddy/skills/
 ```
 
-重启工具或新开会话后生效。目录名保持 `humanizer-zh`（与 front matter 的 `name` 一致）。`references/` 目录需一并保留。
+重启工具或新开会话后生效。目录名保持 `renwei-xiezuo`（与 front matter 的 `name` 一致）。`references/` 目录需一并保留。
 
 ---
 
 ## 怎么用
 
 ```
-去 AI 味：（粘贴正文）
+人味写作：（粘贴正文）
 ```
 
 ```
@@ -178,7 +178,7 @@ cp -r humanizer-zh ~/.workbuddy/skills/
 只要正文、不要说明：
 
 ```
-用 humanizer-zh 处理，只要正文。
+用人味写作处理，只要正文。
 ```
 
 ---
@@ -197,7 +197,7 @@ cp -r humanizer-zh ~/.workbuddy/skills/
 ## 项目结构
 
 ```
-humanizer-zh/
+renwei-xiezuo/
 ├── SKILL.md                    # 主规则（Agent Skills 入口）
 ├── agents/
 │   └── openai.yaml             # OpenAI / Codex 宿主元数据（可选）
@@ -214,7 +214,7 @@ humanizer-zh/
 
 ## 来源与许可
 
-血缘：[blader/humanizer](https://github.com/blader/humanizer) → [op7418/Humanizer-zh](https://github.com/op7418/Humanizer-zh)（歸藏汉化）→ 本版本在保真内核上补强安全边界（场景边界、事实锁、no-op gate、说话人锁定、保护片段）。
+血缘：[blader/humanizer](https://github.com/blader/humanizer) → [op7418/Humanizer-zh](https://github.com/op7418/Humanizer-zh)（歸藏汉化）→ 人味写作在保真内核上补强安全边界（场景边界、事实锁、no-op gate、说话人锁定、保护片段）。
 
 参考：[hardikpandya/stop-slop](https://github.com/hardikpandya/stop-slop)、Wikipedia [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)。
 

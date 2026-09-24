@@ -1,13 +1,13 @@
 ---
-name: humanizer-zh
-description: 拟人写作 / 保真去 AI 味。去除中文文本中的 AI 写作痕迹，或做不改事实的润色。Triggers: 去 AI 味、检查 AI 腔、消除 AI 写作痕迹、humanizer、humanize、润色、改自然点、说人话、make this sound human。用户明确说「启用创作模式」时才做更大幅度改写。不用于从零写文章、写爆文、起标题、做大纲，也不用于改代码、配置、YAML 或翻译。Do not invent facts to sound more human.
+name: renwei-xiezuo
+description: 人味写作。保真去掉中文文本里的 AI 腔，或做不改事实的润色。Triggers: 人味写作、说人话、润色、改自然点、消除 AI 写作痕迹、humanizer、humanize、make this sound human。用户明确说「启用创作模式」时才做更大幅度改写。不用于从零写文章、写爆文、起标题、做大纲，也不用于改代码、配置、YAML 或翻译。Do not invent facts to sound more human.
 version: "1.1.0"
 license: MIT
 compatibility: "Agent Skills compatible (Work Buddy / Claude Code / Codex / Cursor / any SKILL.md host). No scripts, network, or API keys required."
 allowed-tools: []
 ---
 
-# Humanizer-zh
+# 人味写作
 
 在不制造信息、不改变作者身份的前提下，去除模板腔、宣传腔和机械结构。先保真，再谈“像人”。
 
@@ -19,7 +19,7 @@ allowed-tools: []
 2. 用户给出的明确内容替换
 3. 事实与保护片段
 4. 领域 Skill、house style 与文体要求
-5. 当前 humanizer 模式
+5. 当前模式
 6. 风险词句提示
 
 “更自然”“更有冲击力”“写得更具体”不构成修改事实的授权。只有用户给出确切替换，或明确授权新增且同时提供素材，才可改动事实层。若用户要求更具体或改变事实却没有提供替换内容或素材，执行 `no-op`：保留原文，并在正文外请求事实。除非用户明确要求制作模板，否则不得在正文里加入方括号占位符、假设场景或待补细节。
@@ -32,8 +32,8 @@ allowed-tools: []
 
 每次请求重新选择模式，不跨请求继承。
 
-- **保真模式（默认）**：保持原有语域、立场、视角、结构和信息，只修复明显 AI 模式。用户显式调用本 Skill 但只说“润色、改写、自然一点、像人话、口语化”时，仍使用本模式。
-- **创作模式（仅显式启用）**：只有用户明确说“启用创作模式”“按公众号创作模式去 AI 味”“网文深度重写”等，才允许更大幅度调整节奏、段落和叙述顺序。仍须遵守事实锁。
+- **保真模式（默认）**：保持原有语域、立场、视角、结构和信息，只修复明显 AI 模式。用户说“润色、改写、自然一点、像人话、口语化”时，仍使用本模式。
+- **创作模式（仅显式启用）**：只有用户明确说“启用创作模式”“按公众号创作模式重写”“网文深度重写”等，才允许更大幅度调整节奏、段落和叙述顺序。仍须遵守事实锁。
 
 混合文档按区块处理；合同、数据表、代码、引文等区块始终受事实锁和保护片段约束。
 

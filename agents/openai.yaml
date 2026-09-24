@@ -1,7 +1,7 @@
 interface:
-  display_name: "拟人写作 · humanizer-zh"
+  display_name: "人味写作"
   short_description: "保真去掉中文 AI 腔，不改事实、不编故事"
-  default_prompt: "使用 humanizer-zh 处理我在同一条消息中提供的正文；只返回处理后的正文，不改事实。"
+  default_prompt: "使用人味写作处理我在同一条消息中提供的正文；只返回处理后的正文，不改事实。"
 
 policy:
   allow_implicit_invocation: true
